@@ -1,7 +1,11 @@
 #include <iostream>
-int miguel();
 
+void print(int number) {
+	std::cout << number << '\n';
+}
 
 int main() {
-	std::cout << "Hi!" << miguel();
+	std::cout << (0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1) << '\n';
+
+	return 0;
 }
