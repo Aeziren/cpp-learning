@@ -1,7 +1,8 @@
 #include <iostream>
 
 int main() {
-	int number{ 10 };
-	std::cout << number << std::endl;
-	std::cout << &number << std::endl;
+	for (int i{ 1 }; i <= 1'000'000'000; ++i) {
+		if (i % 100'000'000 == 0)
+			std::cout << i << std::endl;
+	}
 }
