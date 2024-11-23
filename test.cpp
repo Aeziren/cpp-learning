@@ -1,21 +1,23 @@
-#include <cstddef>
+// h/t to reader yellowEmu for the idea of adding a counter
 #include <iostream>
+
+int g_counter{ 0 };
+
+void eatStack()
+{
+    std::cout << ++g_counter << ' ';
+
+    // We use a conditional here to avoid compiler warnings about infinite recursion
+    if (g_counter > 0)
+        eatStack(); // note that eatStack() calls itself
+
+    // Needed to prevent compiler from doing tail-call optimization
+    std::cout << "hi";
+}
 
 int main()
 {
-    std::cout << "Enter a positive integer: ";
-    std::size_t length{};
-    std::cin >> length;
-
-    int* array{ new int[length] {} }; // use array new.  Note that length does not need to be constant!
-
-    std::cout << "I just allocated an array of integers of length " << length << '\n';
-
-    array[0] = 5; // set element 0 to value 5
-
-    delete[] array; // use array delete to deallocate array
-
-    // we don't need to set array to nullptr/0 here because it's going out of scope immediately after this anyway
+    eatStack();
 
     return 0;
 }

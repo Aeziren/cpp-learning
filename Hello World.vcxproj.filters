@@ -264,6 +264,9 @@
     <ClCompile Include="lesson_19_2_1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="summary_20_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="get_integer.h">
