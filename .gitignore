@@ -1,1 +1,13 @@
 .vs
+*.suo
+*.user
+*.db
+*.VC.db
+*.opensdf
+*.sdf
+*.ipch
+*.log
+*.obj
+*.exe
+*.pdb
+*.cache
